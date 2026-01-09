@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Receipt Splitter</title>
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Receipt Splitter</h1>
+
+    <section class="upload">
+      <input id="fileInput" type="file" accept="image/*" />
+      <button id="scanBtn">Scan Receipt</button>
+      <div id="progress" class="progress">Idle</div>
+      <div class="preview">
+        <img id="previewImg" alt="preview" />
+      </div>
+    </section>
+
+    <section class="results">
+      <div class="left">
+        <h2>Raw OCR Text</h2>
+        <textarea id="rawText" rows="10"></textarea>
+
+        <h2>Parsed Items</h2>
+        <div id="items"></div>
+      </div>
+
+      <div class="right">
+        <h2>People</h2>
+        <div class="add-person">
+          <input id="personName" placeholder="Person name" />
+          <button id="addPersonBtn">Add</button>
+        </div>
+        <div id="people"></div>
+
+        <h3>Totals</h3>
+        <div id="totals"></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.5/dist/tesseract.min.js"></script>
+  <script src="src/app.js"></script>
+</body>
+</html>
