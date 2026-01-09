@@ -1,0 +1,93 @@
+:root {
+    --bg: #f7f7fb;
+    --card: #fff;
+    --accent: #2f6ce5;
+}
+* {
+    box-sizing: border-box;
+    font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+}
+body {
+    margin: 0;
+    background: var(--bg);
+    color: #222;
+}
+.container {
+    max-width: 1000px;
+    margin: 24px auto;
+    padding: 20px;
+}
+h1 {
+    margin: 0 0 16px;
+}
+.upload {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+#fileInput {
+    flex: 1;
+}
+#scanBtn {
+    padding: 8px 12px;
+}
+.preview img {
+    max-width: 200px;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+.results {
+    display: flex;
+    gap: 20px;
+}
+.left, .right {
+    background: var(--card);
+    padding: 12px;
+    border-radius: 8px;
+    flex: 1;
+}
+.right {
+    max-width: 320px;
+}
+#rawText {
+    width: 100%;
+    padding: 8px;
+}
+#items .item {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 1px dashed #eee;
+}
+.item .name {
+    flex: 1;
+}
+.person-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+.add-person {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+#totals {
+    margin-top: 8px;
+}
+.progress {
+    font-size: 0.9rem;
+    color: #555;
+    margin-left: 8px;
+}
+button {
+    cursor: pointer;
+}
+.small {
+    font-size: 0.9rem;
+    color: #555;
+}
